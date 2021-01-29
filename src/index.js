@@ -6,9 +6,11 @@ import { BasicAnimate } from "./components/BasicAnimate";
 import { Keyframes } from "./components/Keyframes";
 import { Refresh } from "./components/Refresh";
 import { Gesture } from "./components/Gesture";
+import { Drag } from "./components/Drag"
 import { history } from "./history";
 
 import "./index.css";
+
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -32,6 +34,11 @@ const App = () => {
               path="/gesture"
               exact
               render={() => <Gesture key={`gesture-${count}`} />}
+            />
+            <Route
+              path="/drag"
+              exact
+              render={() => <Drag key={`drag-${count}`} />}
             />
             <Route path="/" component={() => <div>this is fallback</div>} />
           </Switch>
