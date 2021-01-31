@@ -7,6 +7,7 @@ import { Keyframes } from "./components/Keyframes";
 import { Refresh } from "./components/Refresh";
 import { Gesture } from "./components/Gesture";
 import { Drag } from "./components/Drag"
+import { MotionValues } from "./components/MotionValues"
 import { history } from "./history";
 
 import "./index.css";
@@ -39,6 +40,11 @@ const App = () => {
               path="/drag"
               exact
               render={() => <Drag key={`drag-${count}`} />}
+            />
+            <Route
+              path="/motion-values"
+              exact
+              render={() => <MotionValues key={`motion-values-${count}`} />}
             />
             <Route path="/" component={() => <div>this is fallback</div>} />
           </Switch>
